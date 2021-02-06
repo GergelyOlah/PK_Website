@@ -1,0 +1,201 @@
+:root {
+  /* Variables */
+  --main-font-color: rgb(204, 204, 204);
+  --main-font-hover-color: whitesmoke;
+  --main-page-max-width: 1200px;
+  --main-input-color: rgb(136, 84, 212);
+  --hoover-input-colour: rgb(164, 124, 219);
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box; /* padding+content+margin+etc will be equal with width*/
+}
+
+/*******************************/
+/*Reset*/
+/*******************************/
+
+*,
+*::before,
+*::after {
+  /* before and after selectors insert something before or after each specified element*/
+  /*This block is a RESET that makes sure that browsers’ differences in their default rendering of HTML can’t ruin the styling */
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  /* Monserrat is the main font, sans-serif is the backup*/
+  color: var(--main-font-color);
+  background-color: black;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  /* Every div that is a direct children (nested) of a container element. */
+  width: 270px;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container img {
+  /* Every image that is in an element with a container class*/
+  height: 200px;
+  margin: 0.5rem 0;
+}
+
+/*******************************/
+/*All section style*/
+/*******************************/
+
+section {
+  max-width: var(--main-page-max-width);
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+section h2 {
+  margin: 2rem 0 1rem;
+}
+
+/*******************************/
+/*Header style*/
+/*******************************/
+
+header {
+  /*Here we have two backgrounds. One gradient and one image.*/
+  /*Linear-gradient is like a plexy glass. It transits from the 1st color to the 2nd.*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/night.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center, bottom;
+  min-width: var(--main-page-max-width);
+  padding-top: 2rem;
+}
+
+.header-nav {
+  max-width: var(--main-page-max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links a {
+  color: var(--main-font-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--main-font-hover-color);
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid var(--main-font-hover-color);
+  /*transition: underline appears 1s after hover event*/
+  transition: border-bottom, 0.1s;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: var(--main-input-color);
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--main-input-color);
+  box-shadow: 2px 2px 6px rgba(106, 54, 158, 0.4);
+  margin: 0.5rem;
+  /*You can set how the cursore should appear upon hoovering*/
+  cursor: pointer;
+}
+
+.btn.btn-full {
+  color: var(--main-font-color);
+  background-color: var(--main-input-color);
+}
+
+.btn:hover,
+.btn-full:hover {
+  background-color: var(--hoover-input-colour);
+  border: 2px solid var(--hoover-input-colour);
+  color: var(--main-font-color);
+  box-shadow: 2px 2px 6px rgba(106, 54, 158, 0.9);
+  transition: background-color 0.25s, border 0.25s, color 0.25s;
+  box-shadow: 0.25s;
+}
+
+/*******************************/
+/*Project-list style*/
+/*******************************/
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-container {
+  width: 25%;
+  margin: 20px 2%;
+}
+
+.project__img {
+  width: 100%;
+}
+
+/*******************************/
+/*Footer style*/
+/*******************************/
+
+footer {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.footer-links a {
+  color: var(--main-font-color);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.footer-links a:hover {
+  color: var(--main-font-hover-color);
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+  transition: border-bottom, 0.1s;
+}
