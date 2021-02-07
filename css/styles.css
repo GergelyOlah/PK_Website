@@ -168,6 +168,10 @@ section h2 {
   margin: 0.5rem 0;
 }
 
+.container p {
+text-align: center;
+}
+
 /*******************************/
 /*Project-list style*/
 /*******************************/
