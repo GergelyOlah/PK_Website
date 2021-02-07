@@ -126,26 +126,26 @@
     </section>
     <section class="contact" id="contact">
       <h2>Contact</h2>
-      <form action="#" method="post">
-        <div>
-          <label for="surname-id">Surename</label>
-          <input
-            type="text"
-            name="surname"
-            id="surname-id"
-            placeholder="Write your surname here"/>
-        </div>
-        <div>
-          <label>
-            Name:
-            <input 
-              type="text"
-              name="forename"
-              placeholder= "Write your forename here"/>
-          </label>
-        </div>
-         <input type="submit" value="Submit Form" />
-        <!https://formspree.io/12121212>
+      <form class="contact-form" action="#" method="post">
+        <input
+          type="text"
+          class="contact-form__input"
+          name="name"
+          placeholder="Your name"
+        />
+        <input
+          type="text"
+          class="contact-form__input"
+          name="email"
+          placeholder="Email"
+        />
+        <textarea
+          placeholder="Message"
+          name="message"
+          class="contact-form__input"
+        ></textarea>
+        <button type="submit" class="btn contact-form__submit">Send</button>
+        <!--https://formspree.io/12121212-->
       </form>
     </section>
     <footer>

@@ -84,6 +84,7 @@ header {
   background-position: center, bottom;
   min-width: var(--main-page-max-width);
   padding-top: 2rem;
+  position: relative;
 }
 
 .header-nav {
@@ -91,6 +92,14 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.tagline {
+  width: var(--main-page-max-width);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -151,7 +160,6 @@ h1 {
   transition: background-color 0.25s, border 0.25s, color 0.25s;
   box-shadow: 0.25s;
 }
-
 /*******************************/
 /*Project-list style*/
 /*******************************/
@@ -169,6 +177,41 @@ h1 {
 
 .project__img {
   width: 100%;
+}
+
+/*******************************/
+/*Form style*/
+/*******************************/
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/contact.png);
+  background-size: cover;
+  background-position: center, bottom;
+  box-shadow: 0 0 100px 100px black inset;
+}
+.contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-form__input {
+  border: none;
+  background: none;
+  color: var(--main-input-color);
+  border-bottom: 1px solid var(--main-input-color);
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+textarea.contact-form__input {
+  border: 1px solid var(--main-input-color);
+  height: 225px;
+  overflow: hidden;
+}
+.contact-form__submit {
+  background: none;
+  margin: 12px 0;
+  cursor: pointer;
 }
 
 /*******************************/
